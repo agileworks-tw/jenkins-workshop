@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="static/custom.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-dark navbar-fixed-top">
+      <a class="navbar-brand" href="#home"><img src="static/logo.png" width="36" alt="logo" align="left" /> AgileWorks</a>
+      <div id="navbar" class="hidden-xs-down">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#slide">簡報</a></li>
+          <li class="nav-item"><a class="nav-link" href="#book">教材</a></li>
+          <li class="nav-item"><a class="nav-link" href="#term">終端機</a></li>
+          <li class="nav-item"><a class="nav-link" href="#jenkins">操作練習</a></li>
+          <li class="nav-item"><a class="nav-link" href="#chat">討論</a></li>
+          <li class="nav-item"><a class="nav-link" href="#survey">問卷</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="home" class="container" style="max-width:800px;margin-top:100px;display:none;">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="static/book-cover.jpg" alt="book" width="280" class="img-thumbnail" />
+        </div>
+        <div class="col-sm-8">
+          <div class="promotion">
+            <h3>Jenkins Workshop</h3>
+            <p>鋼鐵人創造了 Jarvis 為他打理大小事，讓他的主人可以專心在創意的發想以及對付強大的敵人；在軟體開發同樣的我們也可以透過機器人管家 Jenkins CI，來為我們打理開發流程中的大小事，讓我們專注在最有價值的工作上。</p>
+            <p>本課程將從豐田式生產（又稱為精實生產；Lean production ）切入，引導學習持續整合的目的，並介紹從各個階段如何搭配 Jenkins CI。另外也將一步步帶領使用 Jenkins CI 進行自動化建置、測試與部署的實作，透過此課程將領引大家打造一個專案的管家，關注開發流程的每個一環節，一步一步帶著大家完成透過 Jenkins 完成 Continuous Integration（持續整合；CI）及 Continuous Delivery（持續交付；CD）流程。</p>
+            <p>透過 Jenkins CI 的操作，傳授在敏捷開發流程中如何無痛進行 CI 的導入，並且搭配 Jenkins CI 實務上如何在專案的每一環節協助團隊運作。</p>
+            <button class="btn btn-primary">Getting Started</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="book" class="iframe-wrapper" style="display:none">
+      <iframe src="static/blank.html" data-src="http://jenkins.readbook.tw/" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+
+    <div id="term" class="iframe-wrapper" style="display:none">
+      <iframe src="static/blank.html" data-src="http://localhost:9082/" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+
+    <div id="jenkins" class="iframe-wrapper" style="display:none">
+      <iframe src="static/blank.html" data-src="http://localhost:9088/" frameborder="0" allowtransparency="false" style="background:#fff"></iframe>
+    </div>
+
+    <div id="survey" class="iframe-wrapper" style="display:none">
+      <iframe src="static/blank.html" data-src="https://docs.google.com/forms/d/1-q6bPXHPO_efmo0EW2pjDoU_Ny8E6UXP-T8Go2vLY3w/viewform?embedded=true" frameborder="0" allowtransparency="false" style="background:#fff"></iframe>
+    </div>
+
+    <div id="chat" class="iframe-wrapper" style="display:none">
+      <iframe src="static/blank.html" data-src="/jenkins/chat" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
+    <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+
+    <script src="static/dashboard.js"></script>
+  </body>
+</html>
+
