@@ -7,21 +7,32 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>Starter Template for Bootstrap</title>
+    <title>AgileWorks - Jenkins Workshop</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="static/custom.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/animate.min.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
   </head>
   <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5&appId=1683846725181307";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
     <nav class="navbar navbar-dark navbar-fixed-top">
       <a class="navbar-brand" href="#home"><img src="static/logo.png" width="36" alt="logo" align="left" /> AgileWorks</a>
-      <div id="navbar" class="hidden-xs-down">
+      <div id="navbar" class="hidden-sm-down">
         <ul class="nav navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#slide">簡報</a></li>
+          <li class="nav-item"><a class="nav-link" href="#home">首頁</a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">新聞</a></li>
+          <li class="nav-item"><a class="nav-link" href="#slides">簡報</a></li>
           <li class="nav-item"><a class="nav-link" href="#book">教材</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hackpad">筆記</a></li>
           <li class="nav-item"><a class="nav-link" href="#term">終端機</a></li>
           <li class="nav-item"><a class="nav-link" href="#jenkins">操作練習</a></li>
           <li class="nav-item"><a class="nav-link" href="#chat">討論</a></li>
@@ -30,7 +41,7 @@
       </div>
     </nav>
 
-    <div id="home" class="container" style="max-width:800px;margin-top:100px;display:none;">
+    <div id="home" class="container animated fadeIn" style="max-width:800px;margin-top:100px;display:none;">
       <div class="row">
         <div class="col-sm-4">
           <img src="static/book-cover.jpg" alt="book" width="280" class="img-thumbnail" />
@@ -41,38 +52,87 @@
             <p>鋼鐵人創造了 Jarvis 為他打理大小事，讓他的主人可以專心在創意的發想以及對付強大的敵人；在軟體開發同樣的我們也可以透過機器人管家 Jenkins CI，來為我們打理開發流程中的大小事，讓我們專注在最有價值的工作上。</p>
             <p>本課程將從豐田式生產（又稱為精實生產；Lean production ）切入，引導學習持續整合的目的，並介紹從各個階段如何搭配 Jenkins CI。另外也將一步步帶領使用 Jenkins CI 進行自動化建置、測試與部署的實作，透過此課程將領引大家打造一個專案的管家，關注開發流程的每個一環節，一步一步帶著大家完成透過 Jenkins 完成 Continuous Integration（持續整合；CI）及 Continuous Delivery（持續交付；CD）流程。</p>
             <p>透過 Jenkins CI 的操作，傳授在敏捷開發流程中如何無痛進行 CI 的導入，並且搭配 Jenkins CI 實務上如何在專案的每一環節協助團隊運作。</p>
-            <button class="btn btn-primary">Getting Started</button>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="copyright">創科資訊・敏捷軟體開發培訓<br/>Tel: (04)2201-9020<br/><br/>AgileWorks - Agile Programming Best Practices<br/>Copyright &copy; Trunk Studio</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="news" class="container animated slideInDown" style="display:none;padding: 25px;max-width:960px">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="promotion" style="padding:50px">
+            <h3>Jenkins News Center</h3>
+            <ul>
+              <li><a href="http://www.ithome.com.tw/news/104273" target="_blank">知名CI工具Jenkins終於推出2.0版</a></li>
+              <li><a href="http://www.theregister.co.uk/2016/02/23/cloudbees/" target="_blank">Cloudbees serves up Jenkins private SaaSy style</a></li>
+              <li><a href="https://dzone.com/articles/top-8-continuous-integration-tools" target="_blank">Top 8 Continuous Integration Tools</a></li>
+              <li><a href="http://sec.chinabyte.com/196/13708196.shtml" target="_blank">软件生命周期的安全性需要加强</a></li>
+              <li><a href="http://www.infoq.com/articles/secure-continuous-integration-delivery-lifecycle" target="_blank">Securing the Modern Software Delivery Lifecycle</a></li>
+              <li><a href="http://www.eweek.com/enterprise-apps/shippable-updates-continuous-delivery-devops-platform.html" target="_blank">Shippable Updates Continuous Delivery DevOps Platform</a></li>
+            </ul>
+            <div class="fb-follow" data-href="https://www.facebook.com/agileworks.tw" data-layout="standard" data-show-faces="false" data-colorscheme="dark"></div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="book" class="iframe-wrapper" style="display:none">
-      <iframe src="static/blank.html" data-src="http://jenkins.readbook.tw/" frameborder="0" allowtransparency="true"></iframe>
+    <div id="slides" class="iframe-wrapper" style="display:none">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false" style="height:100%">
+  <div class="carousel-inner animated slideInRight" role="listbox">
+    <div class="carousel-item active">
+      <img src="static/slides/1.jpg" alt="slide" style="max-width: 70%;margin:10px auto" />
+    </div>
+    {% for i in range(2, 23) -%}
+    <div class="carousel-item">
+      <img src="static/slides/{{i}}.jpg" alt="slide" style="max-width: 70%;margin:10px auto" />
+    </div>
+    {%- endfor %}
+  </div>
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="icon-prev" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="icon-next" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
     </div>
 
-    <div id="term" class="iframe-wrapper" style="display:none">
-      <iframe src="static/blank.html" data-src="http://localhost:9082/" frameborder="0" allowtransparency="true"></iframe>
+    <div id="book" class="iframe-wrapper animated fadeIn" style="display:none">
+      <iframe src="static/blank.html" data-src="https://smlsunxie.gitbooks.io/jenkins-book-free/content/" frameborder="0" allowtransparency="true"></iframe>
     </div>
 
-    <div id="jenkins" class="iframe-wrapper" style="display:none">
-      <iframe src="static/blank.html" data-src="http://localhost:9088/" frameborder="0" allowtransparency="false" style="background:#fff"></iframe>
+    <div id="hackpad" class="animated fadeIn" style="display:none">
+      <script src="https://trunkstudio.hackpad.com/EckHDw5fJ19.js"></script><noscript><div>View <a href="https://trunkstudio.hackpad.com/EckHDw5fJ19">Jenkins Workshop</a> on Hackpad.</div></noscript>
     </div>
 
-    <div id="survey" class="iframe-wrapper" style="display:none">
+    <div id="term" class="iframe-wrapper animated fadeIn" style="display:none">
+      <iframe src="static/blank.html" data-src="static/ttyjs.html" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+
+    <div id="jenkins" class="iframe-wrapper animated fadeIn" style="display:none">
+      <iframe src="static/blank.html" data-src="static/jenkins.html" frameborder="0" allowtransparency="false" style="background:#fff"></iframe>
+    </div>
+
+    <div id="survey" class="iframe-wrapper animated fadeIn" style="display:none">
       <iframe src="static/blank.html" data-src="https://docs.google.com/forms/d/1-q6bPXHPO_efmo0EW2pjDoU_Ny8E6UXP-T8Go2vLY3w/viewform?embedded=true" frameborder="0" allowtransparency="false" style="background:#fff"></iframe>
     </div>
 
-    <div id="chat" class="iframe-wrapper" style="display:none">
+    <div id="chat" class="iframe-wrapper animated fadeIn" style="display:none">
       <iframe src="static/blank.html" data-src="/jenkins/chat" frameborder="0" allowtransparency="true"></iframe>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="static/js/tether.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 
     <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
-
-    <script src="static/dashboard.js"></script>
+    <script src="static/js/jquery.lazyload.min.js"></script>
+    <script src="static/js/dashboard.js"></script>
   </body>
 </html>
 

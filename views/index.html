@@ -7,42 +7,56 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>Starter Template for Bootstrap</title>
+    <title>AgileWorks - Jenkins Workshop</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-
-    <link href="static/custom.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/animate.min.css" />
+    <link rel="stylesheet" href="static/css/custom.css">
   </head>
   <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5&appId=1683846725181307";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-	<br/><br/>
+    <nav class="navbar navbar-dark navbar-fixed-top">
+      <a class="navbar-brand" href="#home"><img src="static/logo.png" width="36" alt="logo" align="left" /> AgileWorks</a>
+    </nav>
 
-    <div class="container">
+    <div id="home" class="container animated fadeIn" style="max-width:800px;margin-top:100px;">
       <div class="row">
-        <div class="col-xs-6">
-          <img src="static/cover.png" alt="cover" class="img-fluid" />
+        <div class="col-sm-4">
+          <img src="static/jenkins-logo.png" alt="cover" class="img-fluid" />
         </div>
-        <div class="col-xs-6">
-          <form>
-            請輸入邀請碼：<br/>
-            <input type="text" class="form-control" /><br/>
-            <button class="btn btn-primary">Sign-in</button>
-          </form>
+        <div class="col-sm-8">
+          <div class="promotion">
+            <h3>Jenkins Workshop</h3>
+            {% if msg %}<p style="color:yellow">{{ msg }}</p>{% endif %}
+            <form action="http://api.agileworks.tw/login/auth" method="POST">
+              <p>請輸入帳號（Email）：</p>
+              <input type="email" name="email" class="form-control" placeholder="Email" /><br/>
+              <p>請輸入密碼：</p>
+              <input type="password" name="password" class="form-control" placeholder="Password" /><br/>
+              <button class="btn btn-primary">開始上課</button>
+              <a href="http://api.agileworks.tw/signup" class="btn btn-link">註冊新帳號</a>
+            </form>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="copyright">創科資訊 - 敏捷軟體開發培訓<br/>Tel: (04)2201-9020<br/><br/>AgileWorks - Agile Programming Best Practices<br/>Copyright &copy; Trunk Studio</div>
         </div>
       </div>
-    </div><!-- /.container -->
+    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="static/js/tether.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 
-    <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
-
-    <script>
-    $(function() {
-      $('button').click(function() { location.href='dashboard'; return false; });
-    });
-    </script>
   </body>
 </html>
 

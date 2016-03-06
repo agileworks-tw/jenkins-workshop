@@ -1,7 +1,7 @@
 $(function() {
 
   var showIframe = function(id) {
-    $('#home, #slide, #book, #term, #jenkins, #chat, #survey').hide();
+    $('#home, #news, #slides, #book, #hackpad, #term, #jenkins, #chat, #survey').hide();
     $(id).show();
     var frame = $('iframe', $(id));
     if (frame.attr('src') == 'static/blank.html') {
@@ -13,6 +13,13 @@ $(function() {
     showIframe($(this).attr('href'));
   });
 
-  showIframe(window.location.hash);
+  if (window.location.hash == '') {
+    showIframe('#home');
+  }
+  else {
+    showIframe(window.location.hash);
+  }
+
+  $("img.lazy").lazyload();
 });
 

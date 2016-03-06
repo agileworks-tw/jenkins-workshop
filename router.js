@@ -6,7 +6,7 @@ const router = new Router({
 });
 
 router.get('/', async (ctx, next) => {
-  await ctx.render('index');
+  await ctx.render('index', { msg: ctx.request.query.msg });
 });
 
 router.get('/dashboard', async (ctx, next) => {
