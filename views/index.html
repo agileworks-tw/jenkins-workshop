@@ -37,13 +37,13 @@
           <div class="promotion">
             <h3>Jenkins Workshop</h3>
             {% if msg %}<p style="color:yellow">{{ msg }}</p>{% endif %}
-            <form action="http://api.agileworks.tw/login/auth" method="POST">
+            <form action="http://api.agileworks.tw/jenkins/login/auth" method="POST">
               <p>請輸入帳號（Email）：</p>
               <input type="email" name="email" class="form-control" placeholder="Email" /><br/>
               <p>請輸入密碼：</p>
               <input type="password" name="password" class="form-control" placeholder="Password" /><br/>
               <button class="btn btn-primary">開始上課</button>
-              <a href="http://api.agileworks.tw/signup" class="btn btn-link">註冊新帳號</a>
+              <a href="http://api.agileworks.tw/jenkins/signup" class="btn btn-link">註冊新帳號</a>
             </form>
           </div>
         </div>
