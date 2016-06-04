@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="favicon.ico" />
+    <title>AgileWorks - Editor</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="spinkit.css" />
+  </head>
+  <body>
+
+    <div class="container">
+<div style="text-align:center;margin-top:100px;">
+  <img src="terminal-icon.png" alt="terminal" width="128" />
+  <p>Connecting to a Editor service...</p>
+</div>
+<div class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
+<script src="http://localhost:9083/static/mini_require.js"></script>
+<script type="text/javascript">
+$(function() {
+  if (typeof miniRequire != 'undefined') {
+    setTimeout(function() { location.href = 'http://localhost:9083/ide.html'; }, 1000);
+  }
+  else {
+    setTimeout(function() { location.reload(); }, 5000);
+  }
+});
+</script>
+  </body>
+</html>
